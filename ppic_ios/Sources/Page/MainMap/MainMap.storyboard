@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Map Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainMapController" customModule="ppic_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAq-ta-jTG">
+                                <rect key="frame" x="227" y="551" width="38" height="38"/>
+                                <state key="normal" backgroundImage="btn_current_place"/>
+                                <connections>
+                                    <action selector="showCurrentPosition" destination="BYZ-38-t0r" eventType="touchUpInside" id="V3J-Rn-8Ax"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFp-5w-RLF" userLabel="DM Button">
+                                <rect key="frame" x="221" y="600" width="50" height="51"/>
+                                <state key="normal" backgroundImage="btn_main_dm"/>
+                                <connections>
+                                    <action selector="doRequestChat" destination="BYZ-38-t0r" eventType="touchUpInside" id="KlW-OZ-wT2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-rN-NRc" userLabel="Recruit Button" customClass="PicButton" customModule="ppic_ios" customModuleProvider="target">
+                                <rect key="frame" x="154" y="593" width="67" height="67"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" backgroundImage="btn_main_pic">
+                                    <color key="titleColor" red="0.8901960784313725" green="0.37647058823529411" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doRecruit" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iea-wf-cBU"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmt-OU-ONR">
+                                <rect key="frame" x="110" y="607" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="lMt-4v-nS5"/>
+                                    <constraint firstAttribute="height" constant="44" id="o0e-hQ-NyY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t73-hC-fwA" customClass="AnimationButton" customModule="ppic_ios" customModuleProvider="target">
+                                <rect key="frame" x="154" y="593" width="67" height="67"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <state key="normal" title="戻る" backgroundImage="btn_map_release">
+                                    <color key="titleColor" red="0.33333333333333331" green="0.70980392156862748" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearMyPic" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0d-7v-tqr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KFp-5w-RLF" secondAttribute="bottomMargin" constant="24" id="1Vk-Lh-pbM"/>
+                            <constraint firstItem="KFp-5w-RLF" firstAttribute="left" secondItem="t73-hC-fwA" secondAttribute="rightMargin" constant="8" id="6zh-Hh-wis" customClass="PercentageLayoutConstraint" customModule="ppic_ios" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="marginPercent">
+                                        <real key="value" value="0.19600000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jmt-OU-ONR" secondAttribute="bottomMargin" constant="24" id="8xR-f8-mHF">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="t73-hC-fwA" firstAttribute="left" secondItem="jmt-OU-ONR" secondAttribute="rightMargin" constant="8" id="LLj-5G-Au6" customClass="PercentageLayoutConstraint" customModule="ppic_ios" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="marginPercent">
+                                        <real key="value" value="0.19600000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="Be2-rN-NRc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TCO-1R-LD8"/>
+                            <constraint firstItem="KFp-5w-RLF" firstAttribute="top" secondItem="dAq-ta-jTG" secondAttribute="bottom" constant="11" id="Uk8-Gg-7VD"/>
+                            <constraint firstItem="t73-hC-fwA" firstAttribute="centerY" secondItem="Be2-rN-NRc" secondAttribute="centerY" id="kMn-4c-F5t"/>
+                            <constraint firstItem="t73-hC-fwA" firstAttribute="centerX" secondItem="Be2-rN-NRc" secondAttribute="centerX" id="mEU-WD-VbP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Be2-rN-NRc" secondAttribute="bottomMargin" constant="15" id="mQF-2Y-kzl"/>
+                            <constraint firstItem="dAq-ta-jTG" firstAttribute="centerX" secondItem="KFp-5w-RLF" secondAttribute="centerX" id="vle-Tb-e9f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentButton" destination="dAq-ta-jTG" id="iEh-9o-o4H"/>
+                        <outlet property="dmButton" destination="KFp-5w-RLF" id="a1K-yb-OJ9"/>
+                        <outlet property="profileButtonView" destination="jmt-OU-ONR" id="gKi-xq-Ri1"/>
+                        <outlet property="recruitButton" destination="Be2-rN-NRc" id="rYz-MS-s53"/>
+                        <outlet property="releaseButton" destination="t73-hC-fwA" id="WFZ-1Y-SPB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_current_place" width="38" height="38"/>
+        <image name="btn_main_dm" width="50" height="51"/>
+        <image name="btn_main_pic" width="67" height="67"/>
+        <image name="btn_map_release" width="67" height="67"/>
+    </resources>
+</document>

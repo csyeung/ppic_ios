@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IAv-sw-9Jq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SAE-Ua-8Ok">
+            <objects>
+                <navigationController id="IAv-sw-9Jq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zoF-Hu-4w7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t1t-1E-flu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="cDz-xd-65j" kind="relationship" relationship="rootViewController" id="TAm-8y-vgp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGP-j6-DqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="-174"/>
+        </scene>
+        <!--参加中のグループ-->
+        <scene sceneID="zpD-k8-P1s">
+            <objects>
+                <viewController id="cDz-xd-65j" customClass="DirectMessageListController" customModule="ppic_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZDj-Wi-eIF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SmS-mr-tKq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xei-AH-K2z" firstAttribute="bottom" secondItem="SmS-mr-tKq" secondAttribute="bottom" id="QNE-HH-0Xn"/>
+                            <constraint firstAttribute="trailing" secondItem="SmS-mr-tKq" secondAttribute="trailing" id="eX0-wf-KOo"/>
+                            <constraint firstItem="SmS-mr-tKq" firstAttribute="top" secondItem="xei-AH-K2z" secondAttribute="top" id="u2f-Ir-SI0"/>
+                            <constraint firstItem="SmS-mr-tKq" firstAttribute="leading" secondItem="xei-AH-K2z" secondAttribute="leading" id="vME-mp-JDv"/>
+                            <constraint firstItem="SmS-mr-tKq" firstAttribute="bottom" secondItem="xei-AH-K2z" secondAttribute="bottom" id="xqi-6L-LHi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xei-AH-K2z"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="参加中のグループ" id="i9I-WD-WB4"/>
+                    <connections>
+                        <outlet property="tableView" destination="SmS-mr-tKq" id="iTD-42-HI2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UeR-Ne-XUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="-174"/>
+        </scene>
+    </scenes>
+</document>

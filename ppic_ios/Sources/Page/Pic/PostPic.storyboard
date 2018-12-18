@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jAM-4o-nx4">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post Pic Controller-->
+        <scene sceneID="TIn-be-bWc">
+            <objects>
+                <viewController id="jAM-4o-nx4" customClass="PostPicController" customModule="ppic_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0cY-lz-n3c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AKj-VO-lqm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="0.24313725490196078" green="0.24313725490196078" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gu-WJ-ekH">
+                                <rect key="frame" x="327" y="44" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ywg-ex-jYi"/>
+                                    <constraint firstAttribute="width" constant="44" id="hSq-3z-kks"/>
+                                </constraints>
+                                <state key="normal" image="btn_close_white"/>
+                                <connections>
+                                    <action selector="doClose" destination="jAM-4o-nx4" eventType="touchUpInside" id="77j-6j-egr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DX3-Dk-fOc">
+                                <rect key="frame" x="147.66666666666666" y="179" width="80" height="80"/>
+                                <state key="normal" backgroundImage="btn_photo"/>
+                                <connections>
+                                    <action selector="doSelectPhoto" destination="jAM-4o-nx4" eventType="touchUpInside" id="kl4-2Z-UU7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnR-kD-QzQ" customClass="AnimationButton" customModule="ppic_ios" customModuleProvider="target">
+                                <rect key="frame" x="132.66666666666666" y="590.33333333333337" width="110" height="110"/>
+                                <state key="normal" backgroundImage="btn_recruit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doPicWithSender:" destination="jAM-4o-nx4" eventType="touchUpInside" id="yaF-1e-vWm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="どうやってひまつぶす？" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1xi-lm-2M7">
+                                <rect key="frame" x="22.666666666666657" y="299" width="330" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="NKV-db-vb5"/>
+                                    <constraint firstAttribute="width" constant="330" id="xx6-TE-m4E"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投稿時点でのあなたの位置情報が他のユーザーと共有されます" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3E-9Z-gUb">
+                                <rect key="frame" x="30" y="744.66666666666663" width="315" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.70379387842465757" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AKj-VO-lqm" secondAttribute="bottom" id="0OQ-q1-QD0"/>
+                            <constraint firstItem="6Gu-WJ-ekH" firstAttribute="top" secondItem="0cY-lz-n3c" secondAttribute="topMargin" id="4gg-kU-Vfd"/>
+                            <constraint firstItem="1xi-lm-2M7" firstAttribute="top" secondItem="DX3-Dk-fOc" secondAttribute="bottom" constant="40" id="5Ga-9c-dHm"/>
+                            <constraint firstItem="VnR-kD-QzQ" firstAttribute="bottom" secondItem="0cY-lz-n3c" secondAttribute="bottomMargin" multiplier="0.9" id="Bcd-rI-ZYh"/>
+                            <constraint firstItem="V3E-9Z-gUb" firstAttribute="centerX" secondItem="0cY-lz-n3c" secondAttribute="centerX" id="BsT-Mb-uhx"/>
+                            <constraint firstItem="eIz-cD-69U" firstAttribute="trailing" secondItem="AKj-VO-lqm" secondAttribute="trailing" id="E5A-er-nxe"/>
+                            <constraint firstItem="AKj-VO-lqm" firstAttribute="top" secondItem="0cY-lz-n3c" secondAttribute="top" id="IW0-Id-Npl"/>
+                            <constraint firstItem="VnR-kD-QzQ" firstAttribute="centerX" secondItem="0cY-lz-n3c" secondAttribute="centerX" id="N44-CG-bLj"/>
+                            <constraint firstItem="V3E-9Z-gUb" firstAttribute="bottom" secondItem="0cY-lz-n3c" secondAttribute="bottomMargin" multiplier="0.975" id="Qyp-8X-oy3"/>
+                            <constraint firstItem="AKj-VO-lqm" firstAttribute="leading" secondItem="eIz-cD-69U" secondAttribute="leading" id="T0x-xk-sky"/>
+                            <constraint firstItem="eIz-cD-69U" firstAttribute="trailing" secondItem="6Gu-WJ-ekH" secondAttribute="trailing" constant="4" id="WCp-rA-wiS"/>
+                            <constraint firstItem="DX3-Dk-fOc" firstAttribute="top" secondItem="0cY-lz-n3c" secondAttribute="top" constant="179" id="Ym1-iN-iHQ"/>
+                            <constraint firstItem="DX3-Dk-fOc" firstAttribute="centerX" secondItem="0cY-lz-n3c" secondAttribute="centerX" id="gRD-RU-yEs"/>
+                            <constraint firstItem="1xi-lm-2M7" firstAttribute="centerX" secondItem="0cY-lz-n3c" secondAttribute="centerX" id="lcw-fD-6sg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eIz-cD-69U"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="6Gu-WJ-ekH" id="L9q-Kg-1zF"/>
+                        <outlet property="photoButton" destination="DX3-Dk-fOc" id="jw5-Jg-KQA"/>
+                        <outlet property="photoButtonTopMargin" destination="Ym1-iN-iHQ" id="W5O-Ih-kVU"/>
+                        <outlet property="postImage" destination="AKj-VO-lqm" id="l4g-e0-MFZ"/>
+                        <outlet property="recruitButton" destination="VnR-kD-QzQ" id="VbG-SJ-j8M"/>
+                        <outlet property="titleTextField" destination="1xi-lm-2M7" id="Q04-SU-kS1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPw-We-GRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="167.76611694152925"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_close_white" width="22" height="22"/>
+        <image name="btn_photo" width="80" height="80"/>
+        <image name="btn_recruit" width="110" height="110"/>
+    </resources>
+</document>

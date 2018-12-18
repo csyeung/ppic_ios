@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vZF-0h-kss">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--On Boarding Welcome Controller-->
+        <scene sceneID="hCr-ty-f2i">
+            <objects>
+                <viewController id="vZF-0h-kss" customClass="OnBoardingWelcomeController" customModule="ppic_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dmM-Mg-HZm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="De1-Xw-Cgt">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z9o-ep-456">
+                                <rect key="frame" x="20" y="724" width="335" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="z9o-ep-456" secondAttribute="height" multiplier="335:54" id="udr-k0-e8H"/>
+                                </constraints>
+                                <state key="normal" image="onboarding_welcome_button"/>
+                                <connections>
+                                    <action selector="doNext" destination="vZF-0h-kss" eventType="touchUpInside" id="rDH-US-W7u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iZS-Up-Upo" firstAttribute="bottom" secondItem="De1-Xw-Cgt" secondAttribute="bottom" id="0lZ-Lw-sDP"/>
+                            <constraint firstItem="iZS-Up-Upo" firstAttribute="trailing" secondItem="z9o-ep-456" secondAttribute="trailing" constant="20" id="Ry9-OA-rBl"/>
+                            <constraint firstItem="iZS-Up-Upo" firstAttribute="bottom" secondItem="z9o-ep-456" secondAttribute="bottom" id="Syq-Aj-V6M"/>
+                            <constraint firstItem="De1-Xw-Cgt" firstAttribute="leading" secondItem="iZS-Up-Upo" secondAttribute="leading" id="UoW-DD-iLb"/>
+                            <constraint firstItem="iZS-Up-Upo" firstAttribute="trailing" secondItem="De1-Xw-Cgt" secondAttribute="trailing" id="Xmu-oe-nqe"/>
+                            <constraint firstItem="De1-Xw-Cgt" firstAttribute="top" secondItem="iZS-Up-Upo" secondAttribute="top" id="pGW-eh-bFc"/>
+                            <constraint firstItem="z9o-ep-456" firstAttribute="leading" secondItem="iZS-Up-Upo" secondAttribute="leading" constant="20" id="qyG-pB-Rdr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iZS-Up-Upo"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="De1-Xw-Cgt" id="Nwx-Xq-e16"/>
+                        <outlet property="bgImageViewTopConstraint" destination="pGW-eh-bFc" id="weD-OL-jtf"/>
+                        <outlet property="buttonBottomConstraint" destination="Syq-Aj-V6M" id="dKQ-3U-KWg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJT-gV-67L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="-521"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onboarding_welcome_button" width="335" height="54"/>
+    </resources>
+</document>
